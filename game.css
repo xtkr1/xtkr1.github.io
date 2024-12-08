@@ -285,6 +285,33 @@ main #arena #ufo{
     }
 }
 
+.controls {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 1000;
+  }
+  
+  .control-btn {
+    width: 60px;
+    height: 60px;
+    background-color: #444;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  .control-btn:active {
+    background-color: #666;
+  }
+  
+
 
 
 
