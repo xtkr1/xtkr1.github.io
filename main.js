@@ -191,6 +191,10 @@ const jenis = [
   
   }
   
+ 
+
+    
+    
     const btnLeft = document.getElementById("left");
 const btnRight = document.getElementById("right");
 const btnShoot = document.getElementById("shoot");
@@ -226,6 +230,7 @@ btnShoot.addEventListener("click", function () {
   }
 });
 
+  
   
   document.getElementById("restart").addEventListener("click", function(){
     pesawat.style.position = "static"
