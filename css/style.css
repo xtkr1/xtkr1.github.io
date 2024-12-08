@@ -364,169 +364,25 @@ a.tbl-pink:hover {
     
 }
 
-@media screen and (max-width){
-     .wrapper {
-        width: 90%
-     }
-     
-     .logo a{
-        display: block;
-        width:100%;
-        text-align: center;
-     }
-
-     nav .menu {
-        width: 100%;
-        margin: 0;
-     }
-     
-     nav .menu ul {
-        text-align: center;
-        margin: auto;
-        line-height: 60px;
-     }
-     nav.menu ul li {
-        display: inline-block;
-        float: none;
-     }
-
-     
-
-     .foto-kegiatan img {
-        width: 50%;
-     }
-
-     .kepalasekolah {
-        width: 50%;
-        display: block;
-     }
-
-     .footer {
-        display: block;
-        width: 50%;
-        margin: auto;
-     }
-
-     .artikelkelas {
-        margin: 10
-     }
-
-     body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: #f9f9f9;
-        color: #333;
-    }
-    header {
-        background: #0078D7;
-        color: white;
-        padding: 20px 0;
-        text-align: center;
-    }
-    header h1 {
-        margin: 0;
-        font-size: 2.5rem;
-    }
-    header p {
-        margin: 5px 0;
-        font-size: 1.2rem;
-    }
+@media screen and (max-width: 480px) {
     section {
-        max-width: 1000px;
-        margin: 20px auto;
-        background: black;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    section img {
-        width: 100%;
-        border-radius: 8px;
-        margin: 15px 0;
-    }
-    section h2 {
-        color: #0078D7;
-        margin-top: 20px;
-    }
-    section ul {
-        padding-left: 20px;
-    }
-    section ul li {
-        margin-bottom: 10px;
-    }
-    section p {
-        color: black;
+        flex-direction: column;
     }
 
-    main {
-        max-width: 1000px;
-        margin: 20px auto;
-        background: rgb(0, 0, 0);
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    section div {
+        font-size: 2rem;
     }
-    main img {
-        width: 100%;
-        border-radius: 8px;
-        margin: 15px 0;
-    }
-    main h2 {
-        color: #0078D7;
-        margin-top: 20px;
-    }
-    main ul {
-        padding-left: 20px;
-    }
-    main ul li {
-        margin-bottom: 10px;
-    }
-    main p {
-        color: black;
-    }
-
-
-    footer {
-        text-align: center;
-        padding: 10px;
-        background: #333;
-        color: white;
-        margin-top: 20px;
-    }
-    footer p {
-        margin: 0;
-        font-size: 0.9rem;
-    }
-    a {
-        color: #0078D7;
-        text-decoration: none;
-    }
-    a:hover {
-        text-decoration: underline;
-    }
-
-    a.tbl-pink {
-background: darkblue;
-border-radius: 20px;
-margin-top: 20px;
-padding: 15px 20px 15px 20px;
-color: #FFFFFF;
-cursor: pointer;
-font-weight: bold;
-text-align: center;
 }
 
-a.tbl-pink:hover {
-background: #fc5185;
-text-decoration: none;
-}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    section div {
+        font-size: 4rem;
+    }
 }
 
-@media (max-width: 768px) {
-  body {
-    background-size: contain; /* Agar gambar sepenuhnya terlihat di layar kecil */
-  }
+@media screen and (min-width: 769px) and (max-width:1200px){
+    section div {
+        font-size: 4rem;
+    }
 }
 
