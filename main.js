@@ -191,28 +191,45 @@ const jenis = [
   
   }
   
-  window.addEventListener("keydown",function(e){
-    if(maju){
-      posisix = parseInt(pesawat.style.marginLeft)
-      console.log(posisix)
-      if(e.keyCode == 37 && posisix > -360){
-        pesawat.style.marginLeft = posisix - 30 + "px"
-        ammo.style.marginLeft = posisix - 30 + "px"
-      }
-      if(e.keyCode == 39 && posisix < 360){
-        pesawat.style.marginLeft = posisix + 30 + "px"
-        ammo.style.marginLeft = posisix + 30 + "px"
-      }
-      if(e.keyCode == 38){
-        ammo.style.visibility = "visible"
-        ammo.style.animation = "ammo 1s"
-        setTimeout(() => {
-          ammo.style.visibility = "hodden"
-          ammo.style.animation = "none"
-        }, 1000);
-      }
+ 
+
+    
+    
+    const btnLeft = document.getElementById("left");
+const btnRight = document.getElementById("right");
+const btnShoot = document.getElementById("shoot");
+
+btnLeft.addEventListener("click", function () {
+  if (maju) {
+    let posisix = parseInt(pesawat.style.marginLeft);
+    if (posisix > -360) {
+      pesawat.style.marginLeft = posisix - 30 + "px";
+      ammo.style.marginLeft = posisix - 30 + "px";
     }
-  })
+  }
+});
+
+btnRight.addEventListener("click", function () {
+  if (maju) {
+    let posisix = parseInt(pesawat.style.marginLeft);
+    if (posisix < 360) {
+      pesawat.style.marginLeft = posisix + 30 + "px";
+      ammo.style.marginLeft = posisix + 30 + "px";
+    }
+  }
+});
+
+btnShoot.addEventListener("click", function () {
+  if (maju) {
+    ammo.style.visibility = "visible";
+    ammo.style.animation = "ammo 1s";
+    setTimeout(() => {
+      ammo.style.visibility = "hidden";
+      ammo.style.animation = "none";
+    }, 1000);
+  }
+});
+
   
   
   document.getElementById("restart").addEventListener("click", function(){
@@ -223,3 +240,5 @@ const jenis = [
     startpage.style.visibility = "visible";
   
   })
+
+  
