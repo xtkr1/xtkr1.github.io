@@ -122,7 +122,7 @@ section {
     margin: auto;
     display: flex;
     margin-bottom: 50px;
-    background:  rgba(134, 133, 133, 0.5);
+    background:  transparent;
     background-size: 1100;
 }
 
@@ -388,21 +388,7 @@ a.tbl-pink:hover {
         float: none;
      }
 
-     section {
-        display: block;
-     }
-
-     section img {
-        display: block;
-        width: 50%;
-        height: 50%;
-        height: auto;
-     }
-
-     section video {
-        display: block;
-        left: 50%;
-     }
+     
 
      .foto-kegiatan img {
         width: 50%;
@@ -445,10 +431,37 @@ a.tbl-pink:hover {
         margin: 5px 0;
         font-size: 1.2rem;
     }
-    main {
-        max-width: 800px;
+    section {
+        max-width: 1000px;
         margin: 20px auto;
-        background: white;
+        background: black;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    section img {
+        width: 100%;
+        border-radius: 8px;
+        margin: 15px 0;
+    }
+    section h2 {
+        color: #0078D7;
+        margin-top: 20px;
+    }
+    section ul {
+        padding-left: 20px;
+    }
+    section ul li {
+        margin-bottom: 10px;
+    }
+    section p {
+        color: black;
+    }
+
+    main {
+        max-width: 1000px;
+        margin: 20px auto;
+        background: rgb(0, 0, 0);
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -468,6 +481,11 @@ a.tbl-pink:hover {
     main ul li {
         margin-bottom: 10px;
     }
+    main p {
+        color: black;
+    }
+
+
     footer {
         text-align: center;
         padding: 10px;
