@@ -191,26 +191,6 @@ const jenis = [
   
   }
   
- 
-
-    
-    
-    const btnLeft = document.getElementById("left");
-const btnRight = document.getElementById("right");
-const btnShoot = document.getElementById("shoot");
-
-btnLeft.addEventListener("click", function () {
-  if (maju) {
-    let posisix = parseInt(pesawat.style.marginLeft);
-    if (posisix > -360) {
-      pesawat.style.marginLeft = posisix - 30 + "px";
-      ammo.style.marginLeft = posisix - 30 + "px";
-    }
-  }
-});
-
-
-
   
   
   document.getElementById("restart").addEventListener("click", function(){
