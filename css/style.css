@@ -11,8 +11,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: auto;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
     z-index: -1;
+    height: 100vh;
 }
 body::after {
     content: "";
@@ -520,3 +523,10 @@ background: #fc5185;
 text-decoration: none;
 }
 }
+
+@media (max-width: 768px) {
+  body {
+    background-size: contain; /* Agar gambar sepenuhnya terlihat di layar kecil */
+  }
+}
+
