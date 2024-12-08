@@ -192,7 +192,38 @@ const jenis = [
   }
   
  
-
+window.addEventListener("keydown",function(e){
+    if(maju){
+      posisix = parseInt(pesawat.style.marginLeft)
+      console.log(posisix)
+      if(e.keyCode == 37 && posisix > -360){
+        pesawat.style.marginLeft = posisix - 30 + "px"
+        ammo.style.marginLeft = posisix - 30 + "px"
+      }
+      if(e.keyCode == 39 && posisix < 360){
+        pesawat.style.marginLeft = posisix + 30 + "px"
+        ammo.style.marginLeft = posisix + 30 + "px"
+      }
+      if(e.keyCode == 38){
+        ammo.style.visibility = "visible"
+        ammo.style.animation = "ammo 1s"
+        setTimeout(() => {
+          ammo.style.visibility = "hodden"
+          ammo.style.animation = "none"
+        }, 1000);
+      }
+    }
+  })
+  
+  
+  document.getElementById("restart").addEventListener("click", function(){
+    pesawat.style.position = "static"
+    pesawat.style.margin = "0"
+     arena.style.visibility = "hidden"
+    lose.style.visibility = "hidden"
+    startpage.style.visibility = "visible";
+  
+  })
     
     
     const btnLeft = document.getElementById("left");
