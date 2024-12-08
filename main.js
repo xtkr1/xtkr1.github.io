@@ -209,26 +209,7 @@ btnLeft.addEventListener("click", function () {
   }
 });
 
-btnRight.addEventListener("click", function () {
-  if (maju) {
-    let posisix = parseInt(pesawat.style.marginLeft);
-    if (posisix < 360) {
-      pesawat.style.marginLeft = posisix + 30 + "px";
-      ammo.style.marginLeft = posisix + 30 + "px";
-    }
-  }
-});
 
-btnShoot.addEventListener("click", function () {
-  if (maju) {
-    ammo.style.visibility = "visible";
-    ammo.style.animation = "ammo 1s";
-    setTimeout(() => {
-      ammo.style.visibility = "hidden";
-      ammo.style.animation = "none";
-    }, 1000);
-  }
-});
 
   
   
