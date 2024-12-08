@@ -1,320 +1,523 @@
-body{
-    margin: 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
+*
+{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+   
 }
 
-video{
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    object-fit: cover;
+
+body {
+    background-image: url(kelas.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     z-index: -1;
 }
-.startpage{
-    
-    width: 50%;
-    margin:  auto;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.startpage img{
-    display: block ;
-    width: 350px ;
-    background-color: transparent;
-    margin-bottom: 10px;
-}
-
-.startpage .switch{
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.startpage .switch button{
-    color: white;
-    background-color: darkorchid;
-    border-radius: 5px;
-    margin-top: 0px;
-    padding: 5px 20px;
-    margin: 0 20px;
-}
-
-.startpage .switch #plane{
-    background-image: url(images/planec1.png);
-    background-position: 100%;
-    background-size: cover;
-    width: 50px;
-    height: 80px;
-    z-index: 3;
-}
-.startpage .switch #ammo{
-    visibility: hidden;
-    bottom: 30px;
+body::after {
+    content: "";
     position: absolute;
-    z-index: 5;
-    width: 40px;
-    height: 40px;
-    background: url("images/ammo.png");
-    background-size: 100%;
-}
-.startpage button{
-    color: aliceblue;
-    background-color: rgb(87, 87, 252);
-    border-radius: 5px;
-    padding: 0 80px;
-    margin: 20px;
-}
-
-button:hover{
-    opacity: .8;
-}
-
-
-/* game */
-main {
-    visibility: hidden;
-    position: absolute;
-    width: 450px;
-    height: 650px;
-    background: url("images/arena.jpeg");
-    background-size: cover;
-    margin: 0 auto;
-    margin-top: 10px;
-    bottom: 10px;
-    border: solid rgb(99, 57, 95);
-    border-radius: 10px;
-    background-position-y: 0;
-    overflow: hidden;
-}
-
-
-
-
-
-main #arena #meteor{
-    position: absolute;
-    z-index: 3;
-    width: 80px;
-    height: 120px;
-    background: url("images/meteor1.png");
-    background-size: 100%;
-    animation: meteorfire 0.4s infinite;
-
-  }
-main #arena #ufo{
-    position: absolute;
-    z-index: 10;
-    width: 120px;
-    height: 120px;
-    background: url("images/ufo.png");
-    background-size: 100%;
-    left: 40%;
-
-  }
-
-  @keyframes meteorfire {
-    from {
-      background: url("images/meteor1.png");
-      background-size: 100%;
-    }
-    to {
-      background: url("images/meteor2.png");
-      background-size: 100%;
-    }
-  }
-
-
-.story{
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    display: none;
-}
-.story img{
-    width: 350px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-.story #app{
-    bottom: 0;
-    width: 70%;
-    margin: 20px;
-    padding: 80px;
-    border-radius: 5px;
-    position: absolute;
-    background-color: rgba(0, 0, 0, .8);
-    color: aliceblue;
-    font-size: 25px;
-}
-.story button {
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    right: 2%;
-    top: 2%;
-    color: aliceblue;
-    font-size: 25px;
-    cursor: pointer;
-}
-.nyawa{
-    visibility: hidden;
-    top: -40px;
-    position: absolute;
-    left: 0;
-    width: 300px;
-    height: 200px;
-    display: flex;
-    padding: 20px;
-    color: aliceblue;
-    align-items: center;
-}
-.nyawa img{
-    border-radius: 100%;
-    width: 150px;
-    height: 140px;
-    margin-right: 10px;
-}
-.nyawa .container h1{
-    margin: 0;
-    font-weight: 200;
-}
-.nyawa .container .darah{
-    width: 300px;
-    border: black solid;
-    border-radius: 5px;
-    color: red;
-    background-color: rgb(110, 33, 161);
-}
-.nyawa .container .exp{
-    width: 174px;
-    border: black solid;
-    border-radius: 5px;
-    color: purple;
-    background-color:purple;
-}
-
-.popup{
-    z-index: 9;
-    visibility: hidden;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(15, 15, 15, .9);
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-.popup img {
-    margin-top: 100px;
-    background-image: url(images/gameover1.jpg);
-    background-position: 100%;
-    background-size: cover;
-    border-radius: 5px;
-    border: solid rgb(99, 57, 95);
-    box-shadow: 0px 0px 40px purple;
-    height: 340px;
-    width: 430px;
-    z-index: 99;
-    animation: popu 2s alternate;
-}
-.popup button{
-    position: absolute;
-    right: 0;
     top: 0;
-    font-weight: 600;
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 40px;
-}
-
-@keyframes hilang {
-    0%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
-@keyframes kanan {
-    0%{
-        transform: translateX(200px);
-    }
-    100%{
-        transform: translateX(0);
-    }
-}
-@keyframes muncul {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-@keyframes pesawatmuncul {
-    0%{
-        transform: translatey(300px);
-    }
-    100%{
-        transform: translatey(0);
-    }
-}
-@keyframes kabur {
-    0%{
-        transform: translatey(0);
-    }
-    100%{
-        transform: translatey(-400px);
-    }
-}
-@keyframes ammo{
-    0%{
-        top: 100%;
-    }
-    100%{
-        top: 0;
-    }
-}
-
-.controls {
-    position: fixed;
-    bottom: 20px;
+    left: 0;
     width: 100%;
+    height: 100%;
+    z-index: -1; /* Di belakang konten */
+}
+
+
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    width: 1100px;
+    margin: auto;
+    position: relative;
+}
+
+.logo a {
+    font-size: 60px;
+    font-weight: bold;
+    float: left;
+    font-family: courier;
+    color: black;
+}
+
+.menu {
+    float: right;
+}
+
+nav {
+    padding: 10px;
+    width: auto;
+    margin: auto;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    z-index: 1000;
-  }
-  
-  .control-btn {
-    width: 60px;
-    height: 60px;
+    line-height: 40px;
+    position: sticky;
+    position:-webkit-sticky;
+    top: 0;
+    background-image: url(banner.jpg);
+    z-index: 2;
+    border:aqua;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+   
+}
+
+nav ul li {
+    position: relative; /* Untuk dropdown */
+    
+}
+
+nav ul li a {
+    display: block;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: medium;
+}
+
+nav ul a:hover {
+    text-decoration: underline;
+    color: darkblue;
+}
+
+/* Styling untuk sub-menu */
+nav ul li ul {
+    display: none; /* Awalnya disembunyikan */
+    position: absolute;
+    top: 60px; /* Jarak dari menu utama */
+    left: 0;
     background-color: #444;
-    color: #fff;
-    font-size: 24px;
-    border: none;
-    border-radius: 50%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li ul li a {
+    padding: 10px 20px;
+    white-space: nowrap; /* Supaya tidak terpotong */
+}
+
+
+
+/* Tampilkan sub-menu saat hover */
+nav ul li:hover ul {
+    display: block;
+}
+
+
+section {
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+    background:  transparent;
+    background-size: 1100;
+}
+
+.kolom {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.kolom .deskripsi {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'comic sans';
+    color: darkblue;
+}
+
+.skanjalogo {
+    position: relative;
+    top: 40px;
+    width: 90%;
+    right: 0;
+}
+
+
+.structure-foto {
+    position: relative;
+    top: 50px;
+    width: 90%;
+    right: 0;
+}
+
+.kepalasekolah {
+    right: 0;
+    top: 40px;
+    margin: 20px;
+}
+
+.foto-structure {
+    left: 0;
+    top: 40px;
+    margin: 20px;
+    width: 70%;
+}
+
+.logokelas img {
+    left: 50%;
+    margin: 20px;
+    width: 50%;
+    right: 50%;
+}
+
+h2 {
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: darkblue;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+}
+
+    
+p {
+  margin: 3px 0px 3px 3px;
+  padding: 3px 0px 3px 3px; 
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #FFFFFF;
+}
+
+.tengah {
+    text-align: center;
+    width: 100%;
+}
+
+.mars {
+    text-align: left;
+}
+
+.mars p{
+    text-align: left;
+}
+
+
+
+
+.tutor-list {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.kartu-tutor {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.kartu-tutor img {
+    width: 80%;
+    border-radius: 50%;
+}
+
+.kartu-tutor p {
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+    color:#FFFFFF;
+}
+
+
+.partners-list {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.kartu-partners {
+    width: 20%;
+    margin: 0% auto;
+}
+
+.kartu-partner img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+
+.video-class h2 {
+    text-align: center;
+}
+
+.video-class {
+    display: grid;
+    place-items: center;
+}
+
+#contact {
+    background: #dedede;
+    padding:50px 0px 50px 0px;
+}
+
+
+
+h3 {
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color:darkblue;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+}
+
+#copyright {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+#copyright p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.skanjalogo img {
+    position: center;
+    top: 40px;
+    width: 90%;
+    right: 0;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.slides {
+    display: none;
+    width: 100%;
+
+}
+.active {
+    display: block;
+}
+
+.visimisi {
+    text-align: left;
+    margin: 26px;
+    align-items: left;
+}
+
+.visimisi h3 {
+    text-align: left;
+    margin: 20px;
+}
+
+.footer-section p {
+        color: #828282;;
+}
+
+.artikelkelas p {
+    text-align: left;
+    margin: 30px;
+    align-items: left;
+    font-size: medium;
+}
+
+a.tbl-pink {
+    background: #fc5185;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px 20px 15px 20px;
+    color: #FFFFFF;
     cursor: pointer;
-  }
-  
-  .control-btn:active {
-    background-color: #666;
-  }
-  
+    font-weight: bold;
+}
+
+a.tbl-pink:hover {
+    background: darkblue;
+    text-decoration: none;
+}
+
+.foto-kegiatan table tr td img {
+    display: flex;
+    margin: 8.5px;
+    align-items: center;
+    
+}
+
+@media screen and (max-width){
+     .wrapper {
+        width: 90%
+     }
+     
+     .logo a{
+        display: block;
+        width:100%;
+        text-align: center;
+     }
+
+     nav .menu {
+        width: 100%;
+        margin: 0;
+     }
+     
+     nav .menu ul {
+        text-align: center;
+        margin: auto;
+        line-height: 60px;
+     }
+     nav.menu ul li {
+        display: inline-block;
+        float: none;
+     }
+
+     
+
+     .foto-kegiatan img {
+        width: 50%;
+     }
+
+     .kepalasekolah {
+        width: 50%;
+        display: block;
+     }
+
+     .footer {
+        display: block;
+        width: 50%;
+        margin: auto;
+     }
+
+     .artikelkelas {
+        margin: 10
+     }
+
+     body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+    header {
+        background: #0078D7;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+    header p {
+        margin: 5px 0;
+        font-size: 1.2rem;
+    }
+    section {
+        max-width: 1000px;
+        margin: 20px auto;
+        background: black;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    section img {
+        width: 100%;
+        border-radius: 8px;
+        margin: 15px 0;
+    }
+    section h2 {
+        color: #0078D7;
+        margin-top: 20px;
+    }
+    section ul {
+        padding-left: 20px;
+    }
+    section ul li {
+        margin-bottom: 10px;
+    }
+    section p {
+        color: black;
+    }
+
+    main {
+        max-width: 1000px;
+        margin: 20px auto;
+        background: rgb(0, 0, 0);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    main img {
+        width: 100%;
+        border-radius: 8px;
+        margin: 15px 0;
+    }
+    main h2 {
+        color: #0078D7;
+        margin-top: 20px;
+    }
+    main ul {
+        padding-left: 20px;
+    }
+    main ul li {
+        margin-bottom: 10px;
+    }
+    main p {
+        color: black;
+    }
 
 
+    footer {
+        text-align: center;
+        padding: 10px;
+        background: #333;
+        color: white;
+        margin-top: 20px;
+    }
+    footer p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+    a {
+        color: #0078D7;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
 
+    a.tbl-pink {
+background: darkblue;
+border-radius: 20px;
+margin-top: 20px;
+padding: 15px 20px 15px 20px;
+color: #FFFFFF;
+cursor: pointer;
+font-weight: bold;
+text-align: center;
+}
 
-
-
-
+a.tbl-pink:hover {
+background: #fc5185;
+text-decoration: none;
+}
+}
