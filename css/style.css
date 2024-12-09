@@ -368,9 +368,11 @@ a.tbl-pink:hover {
     section {
         flex-direction: column;
     }
-
     section div {
-        font-size: 2rem;
+        font-size: 1rem;
+    }
+    iframe {
+        width: 480px;
     }
 }
 
@@ -378,11 +380,19 @@ a.tbl-pink:hover {
     section div {
         font-size: 1rem;
     }
+    iframe {
+        width: 481px;
+    }
+    img {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width:1200px){
     section div {
         font-size: 1rem;
     }
+    iframe {
+        width: 100%;
+    }
 }
-
