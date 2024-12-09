@@ -376,13 +376,13 @@ a.tbl-pink:hover {
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
     section div {
-        font-size: 4rem;
+        font-size: 1rem;
     }
 }
 
 @media screen and (min-width: 769px) and (max-width:1200px){
     section div {
-        font-size: 4rem;
+        font-size: 1rem;
     }
 }
 
