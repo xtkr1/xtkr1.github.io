@@ -372,7 +372,7 @@ a.tbl-pink:hover {
         font-size: 1rem;
     }
     iframe {
-        width: 480px;
+        width: 100%;
     }
 }
 
@@ -381,7 +381,7 @@ a.tbl-pink:hover {
         font-size: 1rem;
     }
     iframe {
-        width: 481px;
+        width: 100%;
     }
     img {
         width: 100%;
