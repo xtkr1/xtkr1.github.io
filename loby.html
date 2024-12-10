@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Entry Animation</title>
+  <style>
+    /* Atur dasar halaman */
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Mencegah scrollbar saat animasi */
+      font-family: Arial, sans-serif;
+      background-image: url(codi.webp);
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+
+    /* Animasi overlay masuk */
+    .entry-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(hacker.jpg);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 10;
+      animation: slideUp 5s ease-in-out forwards;
+    }
+
+    .entry-overlay h1 {
+      font-size: 3rem;
+      text-align: center;
+      color: white;
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+      z-index: 11;
+    }
+
+    /* Konten utama */
+    .content {
+      display: none; /* Sembunyikan konten saat overlay aktif */
+      text-align: center;
+      padding: 20px;
+      font-size: 3rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh; /* Tinggi penuh layar */
+    }
+
+    /* Efek blink pada kursor */
+
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    /* Animasi keyframes */
+    @keyframes slideUp {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Tombol dan efek */
+    a.tbl-pink {
+      background: darkblue;
+      border-radius: 20px;
+      padding: 15px 20px;
+      color: #FFFFFF;
+      cursor: pointer;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+    }
+    a.tbl-pink:hover {
+      background: #fc5185;
+    }
+  </style>
+</head>
+<body>
+  <!-- Overlay dengan animasi masuk -->
+  <div class="entry-overlay">
+    <h1>Welcome to My Website</h1>
+  </div>
+
+  <!-- Konten utama yang akan muncul setelah overlay selesai -->
+  <div class="content">
+    <span id="text"></span>
+    <a href="index.html" class="tbl-pink">Next</a>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const overlay = document.querySelector('.entry-overlay');
+      const content = document.querySelector('.content');
+      const textElement = document.getElementById('text');
+      const texts = ["Hi Sobat?!","Welcome To The XTKR1 Website!", "Have Fun On This Website!"];
+      let textIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+
+      // Animasi mengetik
+      function typeEffect() {
+        const currentText = texts[textIndex];
+
+        if (isDeleting) {
+          textElement.innerHTML = currentText.substring(0, charIndex--);
+        } else {
+          textElement.innerHTML = currentText.substring(0, charIndex++);
+        }
+
+        // Tentukan kecepatan efek
+        let typingSpeed = isDeleting ? 50 : 300;
+
+        // Jika selesai mengetik dan tidak sedang menghapus
+        if (!isDeleting && charIndex === currentText.length) {
+          isDeleting = true;
+          typingSpeed = 5000; // Jeda sebelum mulai menghapus
+        }
+
+        // Jika selesai menghapus
+        if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          textIndex = (textIndex + 1) % texts.length; // Beralih ke teks berikutnya
+        }
+
+        // Jalankan efek mengetik
+        setTimeout(typeEffect, typingSpeed);
+      }
+
+      // Mulai efek mengetik tanpa delay
+      typeEffect();
+
+      // Sembunyikan overlay dan tampilkan konten setelah animasi selesai
+      setTimeout(() => {
+        overlay.style.opacity = '0';
+        content.style.display = 'flex';
+        document.body.style.overflow = 'auto'; // Aktifkan scrollbar
+      }, 5000); // Durasi animasi overlay
+    });
+  </script>
+</body>
+</html>
