@@ -45,7 +45,7 @@ body::after {
     font-weight: bold;
     float: left;
     font-family: courier;
-    color: black;
+    color:  rgb(39, 255, 255);
 }
 
 .menu {
@@ -81,7 +81,7 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    color: black;
+    color: aquamarine;
     font-weight: bold;
     text-align: center;
     padding: 10px 20px;
@@ -91,7 +91,7 @@ nav ul li a {
 
 nav ul a:hover {
     text-decoration: underline;
-    color: darkblue;
+    color: white;
 }
 
 /* Styling untuk sub-menu */
