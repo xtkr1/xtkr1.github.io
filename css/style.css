@@ -409,22 +409,22 @@ a.tbl-pink:hover {
         image-rendering: crisp-edges; /* Menjaga ketajaman gambar pada DPI tinggi */
     }
     nav {
-        margin: 2px;
+        margin: none;
         width: 100%;
         height: auto;
-        padding: auto;
+        padding: none;
 
     .logo a {
         font-size: 40px;  /* Mengurangi ukuran font logo agar proporsional */
     }
 
     nav ul li a {
-        font-size: 8px; /* Menyesuaikan ukuran font agar lebih mudah dibaca */
+        font-size: 2px; /* Menyesuaikan ukuran font agar lebih mudah dibaca */
     }
 
     .wrapper {
         width: 100%; /* Menyesuaikan lebar wrapper untuk perangkat kecil */
-        padding: 0 10px; /* Memberikan ruang kiri dan kanan */
+        padding: 0 0px; /* Memberikan ruang kiri dan kanan */
     }
 
     /* Menyesuaikan gambar dengan resolusi tinggi */
