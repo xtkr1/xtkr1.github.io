@@ -434,13 +434,11 @@ a.tbl-pink:hover {
     }
 
     /* Memberikan padding ekstra pada konten di perangkat kecil */
-    .container {
-        padding: 20px;
-    }
+    
 
     section {
         flex-direction: column; /* Menyusun konten secara vertikal */
-        padding: 15px; /* Menambah padding agar tidak terlalu mepet */
+         /* Menambah padding agar tidak terlalu mepet */
     }
 
     .footer-section p, .artikelkelas p {
