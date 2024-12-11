@@ -408,26 +408,43 @@ a.tbl-pink:hover {
         height: auto;
         image-rendering: crisp-edges; /* Menjaga ketajaman gambar pada DPI tinggi */
     }
-    nav {
-        margin: none;
-        width: 100%;
-        height: auto;
-        padding: none;
-        background-size: 100%;
-
-    .logo a {
-        font-size: 40px;  /* Mengurangi ukuran font logo agar proporsional */
+    nav ul li ul {
+        display: none;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        background-color: #444;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
 
-    nav ul li a {
-        font-size: small;
-        padding: 2px 2px/* Menyesuaikan ukuran font agar lebih mudah dibaca */
+    nav ul li ul li a {
+        padding: 10px 20px;
+        font-size: 16px;
     }
 
+    nav ul li:hover ul {
+        display: block;
+    }
+
+    /* Styling untuk elemen wrapper dan menu untuk perangkat kecil */
     .wrapper {
-        width: 100%; /* Menyesuaikan lebar wrapper untuk perangkat kecil */
-        padding: 0 0px; /* Memberikan ruang kiri dan kanan */
+        width: 100%;
+        padding: 0 10px;
     }
+
+    .container {
+        padding: 20px;
+    }
+
+    /* Gambar dalam navigasi */
+    .logo img {
+        width: 100%;
+        max-width: 50px;
+        height: auto;
+    }
+
 
     /* Menyesuaikan gambar dengan resolusi tinggi */
     .skanjalogo img, .structure-foto img {
