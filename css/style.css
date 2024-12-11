@@ -364,7 +364,7 @@ a.tbl-pink:hover {
     
 }
 
-@media screen and (min-width: 300px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     section {
         flex-direction: column;
     }
@@ -395,4 +395,21 @@ a.tbl-pink:hover {
     iframe {
         width: 100%;
     }
+}
+
+@media screen and (min-width: 300px) and (max-width: 479px) {
+    section {
+        flex-direction: column;
+    }
+    section div {
+        font-size: 1rem;
+    }
+    iframe {
+        width: 100%;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    
 }
