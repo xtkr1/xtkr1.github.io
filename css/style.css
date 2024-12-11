@@ -421,7 +421,7 @@ a.tbl-pink:hover {
 
     nav ul li a {
         font-size: small;
-        padding: 5px 5px/* Menyesuaikan ukuran font agar lebih mudah dibaca */
+        padding: 2px 2px/* Menyesuaikan ukuran font agar lebih mudah dibaca */
     }
 
     .wrapper {
