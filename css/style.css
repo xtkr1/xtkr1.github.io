@@ -398,18 +398,54 @@ a.tbl-pink:hover {
 }
 
 @media screen and (min-width: 300px) and (max-width: 479px) {
-    section {
-        flex-direction: column;
+    body {
+        font-size: 16px; /* Menambah ukuran font untuk kenyamanan di perangkat dengan DPI tinggi */
     }
-    section div {
-        font-size: 1rem;
-    }
-    iframe {
-        width: 100%;
-    }
+
+    /* Gunakan gambar dengan resolusi tinggi */
     img {
         width: 100%;
         height: auto;
+        image-rendering: crisp-edges; /* Menjaga ketajaman gambar pada DPI tinggi */
+    }
+
+    .logo a {
+        font-size: 40px;  /* Mengurangi ukuran font logo agar proporsional */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Menyesuaikan ukuran font agar lebih mudah dibaca */
+    }
+
+    .wrapper {
+        width: 100%; /* Menyesuaikan lebar wrapper untuk perangkat kecil */
+        padding: 0 10px; /* Memberikan ruang kiri dan kanan */
+    }
+
+    /* Menyesuaikan gambar dengan resolusi tinggi */
+    .skanjalogo img, .structure-foto img {
+        width: 100%;
+        max-width: 500px; /* Mengatur lebar maksimal gambar */
+    }
+
+    /* Memberikan padding ekstra pada konten di perangkat kecil */
+    .container {
+        padding: 20px;
+    }
+
+    section {
+        flex-direction: column; /* Menyusun konten secara vertikal */
+        padding: 15px; /* Menambah padding agar tidak terlalu mepet */
+    }
+
+    .footer-section p, .artikelkelas p {
+        font-size: 14px; /* Ukuran font yang lebih kecil di perangkat mobile */
+    }
+
+    /* Slideshow untuk perangkat dengan DPI tinggi */
+    .slideshow-container {
+        width: 100%;
+        border-radius: 10px;
     }
     
 }
