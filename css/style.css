@@ -430,7 +430,7 @@ a.tbl-pink:hover {
 
     /* Styling untuk elemen wrapper dan menu untuk perangkat kecil */
     .wrapper {
-        width: 100%;
+        width: 90%;
         padding: 0 10px;
     }
 
@@ -457,17 +457,5 @@ a.tbl-pink:hover {
 
     section {
         flex-direction: column; /* Menyusun konten secara vertikal */
-         /* Menambah padding agar tidak terlalu mepet */
-    }
-
-    .footer-section p, .artikelkelas p {
-        font-size: 14px; /* Ukuran font yang lebih kecil di perangkat mobile */
-    }
-
-    /* Slideshow untuk perangkat dengan DPI tinggi */
-    .slideshow-container {
-        width: 100%;
-        border-radius: 10px;
-    }
     
 }
