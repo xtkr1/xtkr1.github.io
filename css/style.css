@@ -409,8 +409,9 @@ a.tbl-pink:hover {
         image-rendering: crisp-edges; /* Menjaga ketajaman gambar pada DPI tinggi */
     }
     nav {
-        margin: auto;
+        margin: 2px;
         width: 100%;
+        height: auto;
         padding: auto;
 
     .logo a {
@@ -418,7 +419,7 @@ a.tbl-pink:hover {
     }
 
     nav ul li a {
-        font-size: 16px; /* Menyesuaikan ukuran font agar lebih mudah dibaca */
+        font-size: 8px; /* Menyesuaikan ukuran font agar lebih mudah dibaca */
     }
 
     .wrapper {
