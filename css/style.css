@@ -413,13 +413,15 @@ a.tbl-pink:hover {
         width: 100%;
         height: auto;
         padding: none;
+        background-size: 100%;
 
     .logo a {
         font-size: 40px;  /* Mengurangi ukuran font logo agar proporsional */
     }
 
     nav ul li a {
-        font-size: 2px; /* Menyesuaikan ukuran font agar lebih mudah dibaca */
+        font-size: small;
+        padding: 5px 5px/* Menyesuaikan ukuran font agar lebih mudah dibaca */
     }
 
     .wrapper {
